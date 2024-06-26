@@ -1,0 +1,41 @@
+<project name="Calculator">
+
+    <target name="build">
+        <mkdir dir="build"/>
+        <javac srcdir="src"
+               destdir="build"/>
+    </target>
+
+    <target name="clean">
+        <delete dir="build"/>
+        <delete dir="doc"/>
+        <delete file="Calculator.jar"/>
+    </target>
+
+    <target name="javadoc">
+        <mkdir dir="doc"/>
+        <javadoc destdir="doc"
+                 sourcepath="src"
+                 charset="utf8"/>
+    </target>
+
+    <target name="run" depends="build">
+        <java classname="be.lionelgoffaux.calculator.Main"
+              classpath="build"
+              fork="true"/>
+    </target>
+
+    <target name="jar" depends="build">
+        <jar destfile="Calculator.jar" basedir="build/">
+            <manifest>
+                <attribute name="Main-Class" value="be.lionelgoffaux.calculator.Main"/>
+            </manifest>
+        </jar>
+        <delete dir="build"/>
+    </target>
+
+    <target name="runJar" depends="jar">
+        <java jar="Calculator.jar" fork="true"/>
+    </target>
+
+</project>
