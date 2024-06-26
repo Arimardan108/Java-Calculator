@@ -7,11 +7,11 @@ the pattern.
 
 ### Requirements:
 
-* JDK 1.8
-* Ant Builder
+- JDK 1.8
+- Ant Builder
 
 ```text
-git clone https://github.com/lionelGoffaux/Calculator.git
+git clone https://github.com/Arimardan108/Java-Calculator.git
 cd Calculator
 ant jar
 ```
@@ -23,10 +23,12 @@ After that the jar file is emerged.
 ### Run
 
 To run the Calculator on linux and OS X, you just need to run this command.
+
 ```text
 java -jar Calculator.jar
 ```
-On  Windows, just double click on the jar file.
+
+On Windows, just double click on the jar file.
 
 ### Using
 
